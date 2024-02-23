@@ -43,6 +43,8 @@ public class Games : MonoBehaviour
 
     void Start()
     {
+        Screen.sleepTimeout = SleepTimeout.NeverSleep;
+
         this.carrot.Load_Carrot(this.check_exit_app);
         this.carrot.ads.set_act_Rewarded_Success(this.act_Rewarded_Success_Shop);
         this.carrot.shop.onCarrotPaySuccess += this.onCarrotPaySuccess_shop;
